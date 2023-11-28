@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        <!--Anonymous Function 1-->
+
+
+         var Odd=function(arr){
+          for(var i=0;i<arr.length;i++){
+            if(arr[i]%2!=0){
+                console.log(arr[i]);
+            }
+          }
+        }
+        Odd([1,2,3,4,5,7,8,11,10]);
+
+        var Caps=function(str){
+
+          var ans=str.toLowerCase().split(" ");
+          for(var i=0;i<ans.length;i++){
+            ans[i]=ans[i][0].toUpperCase()+ans[i].slice(1);
+
+          }
+          console.log(ans.join(" "));
+        }
+        Caps("My NamE is rushi");
+
+        var Sum=function(Arr){
+            var Ans=0;
+          for(var i=0;i<Arr.length;i++){
+            Ans=Ans+Arr[i];
+          }
+          console.log(Ans)
+
+        }
+        Sum([8,23,12,10]);
+
+        var Prime=function(arr){
+          
+          for(var i=0;i<arr.length;i++){
+            var count=0;
+            for(var j=1;j<=arr[i];j++){
+            if(arr[i]%j==0)
+            count++;
+            }
+            if(count==2){
+            console.log(arr[i]);
+          }
+          }
+          
+
+        }
+        Prime([2,34,3,7,9,79]);
+
+        var Palindrome=function(num){
+      var Ans=num;
+      var result=0;
+      while(Ans>0){
+        result=result*10+Ans%10;
+        Ans=Math.floor(Ans/10);
+
+      }
+     
+      if(result==num){
+        console.log("Palindrome")
+      }else{
+         console.log("Not Palindrome")
+      }
+      
+
+}
+Palindrome(124)
+
+
+var median=function(arr,brr){
+    var Ans=arr.concat(brr);
+    var sortedArray=Ans.sort((a,b)=> a-b);
+    
+    var Median=0;
+    var l=sortedArray.length;
+    var middle=Math.floor(l/2);
+    
+    if(l%2==0){
+        Median=(sortedArray[middle-1]+sortedArray[middle])/2;
+    }else{
+        Median=sortedArray[middle];
+    }
+    console.log(Median);
+}
+median([3,4,5,1],[8,2,7,10])
+
+
+        var repeat=function(arr){
+          
+          for(var i=0;i<arr.length;i++){
+            var Ans=false;
+            for(var j=i+1;j<arr.length;j++){
+              if(arr[i]==arr[j]){
+                Ans=true;
+                break;
+              }
+            }
+            var ans;
+            if(Ans==false){
+                console.log(arr[i]);
+            }
+            
+
+          }
+
+        }
+        repeat([1,23,2,1,23,4,5,6,9]);
+
+        
+var rotation=function(arr,k){
+    var ans=[];
+    var ans1=arr.slice(0,k);
+    ans=arr.slice(k);
+    
+    console.log(ans.concat(ans1))
+      
+
+}
+ rotation([1,2,3,4,5],4);
+
+ (function(arr){
+          for(var i=0;i<arr.length;i++){
+            if(arr[i]%2!=0){
+                console.log(arr[i]);
+            }
+          }
+        })
+        ([1,2,3,4,5,7,8,11,10]);
+
+        (function(str){
+
+          var ans=str.toLowerCase().split(" ");
+          for(var i=0;i<ans.length;i++){
+            ans[i]=ans[i][0].toUpperCase()+ans[i].slice(1);
+
+          }
+          console.log(ans.join(" "));
+        })
+        ("My NamE is rushi");
+
+        (function(Arr){
+            var Ans=0;
+          for(var i=0;i<Arr.length;i++){
+            Ans=Ans+Arr[i];
+          }
+          console.log(Ans)
+
+        })([8,23,12,10]);
+
+        (function(arr){
+          
+          for(var i=0;i<arr.length;i++){
+            var count=0;
+            for(var j=1;j<=arr[i];j++){
+            if(arr[i]%j==0)
+            count++;
+            }
+            if(count==2){
+            console.log(arr[i]);
+          }
+          }
+          
+
+        })([2,34,3,7,9,79]);
+   
+
+
+ (function(num){
+      var Ans=num;
+      var result=0;
+      while(Ans>0){
+        result=result*10+Ans%10;
+        Ans=Math.floor(Ans/10);
+
+      }
+     
+      if(result==num){
+        console.log("Palindrome")
+      }else{
+         console.log("Not Palindrome")
+      }
+      
+
+})
+(191);
+
+
+ (function(arr,brr){
+            var Ans=arr.concat(brr);
+            var Sort=Ans.sort((a,b)=>a-b);
+            var Median=0;
+            var l=Sort.length;
+            var Middle=Math.floor(l/2);
+            if(l%2==0){
+                Median=(Sort[Middle-1]+Sort[Middle])/2
+            }else{
+                Median=Sort[Middle];
+            }
+            console.log(Median);
+
+        })([2,4,5,6,7],[1,3,8,10]);
+
+
+        (function(arr){
+          
+          for(var i=0;i<arr.length;i++){
+            var Ans=false;
+            for(var j=i+1;j<arr.length;j++){
+              if(arr[i]==arr[j]){
+                Ans=true;
+                break;
+              }
+            }
+            var ans;
+            if(Ans==false){
+                console.log(arr[i]);
+            }
+            
+
+          }
+
+        })
+        ([1,23,2,1,23,4,5,6,9]);
+
+
+        (function(arr,k){
+            var Ans=[];
+            var Ans1=arr.slice(0,k);
+            var Ans=arr.slice(k);
+
+          console.log(Ans.concat(Ans1))
+
+        })([2,4,5,6,7],2)      
+
+        
+
+var Odd=(Arr)=>{
+    for(var i=0;i<Arr.length;i++){
+            if(Arr[i]%2!=0){
+                console.log(Arr[i])
+            }
+          }
+
+}
+Odd([11,12,10,8,5])
+
+var Cap=(str)=>{
+       var sent=str.toLowerCase().split(" ");
+       for(var i=0;i<sent.length;i++){
+       sent[i]=sent[i][0].toUpperCase()+sent[i].slice(1);
+       }
+       console.log(sent.join(" "))
+
+       }
+       Cap("My name is rushi")
+
+var Sum=(Arr)=>{
+            var Ans=0;
+          for(var i=0;i<Arr.length;i++){
+            Ans=Ans+Arr[i];
+          }
+          return Ans;
+
+        }
+        console.log(Sum([8,23,12,10])) 
+
+        var Prime=(Arr)=>{
+          
+          for(var i=0;i<Arr.length;i++){
+            var Count=0;
+            for(var j=1;j<=parseInt(Arr[i]);j++){
+               if(Arr[i]%j==0){
+                Count++;
+               }
+             
+               
+            }
+              if(Count==2){
+              console.log(Arr[i]);
+              }
+          }
+        }
+        Prime([19,2,3,4,5,22,12,7,11,13])
+
+
+        var palindrome=(Num)=>{
+          var N=Num;
+          var M=0;
+          while(N>0){
+          M=M*10+N%10;
+          N=Math.floor(N/10);
+          }
+          
+          if(M==Num){
+            console.log("Palindrome");
+          }else{
+            console.log("Not Palindrome")
+          }
+
+        }
+        palindrome(999)
+
+    </script>
+</body>
+</html>
